@@ -1,6 +1,6 @@
 //2,05h
 var slotsHTML = []; slotsHTML.length = 3;
-var moneybox;
+var money;
 var vals = []; vals.length = 3;
 var money = 30;
 var spins = 0;
