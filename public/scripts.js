@@ -7,6 +7,10 @@ var spins = 0;
 var spinsHTML;
 
 window.onload = function() {  
+    gettingElements();
+}
+
+function gettingElements() {
     for (i = 0; i < slotsHTML.length; i++) {
         slotsHTML[i] = document.getElementById("slot-" + i);
     }
