@@ -1,7 +1,7 @@
 //2,05h
 var slotsHTML = []; slotsHTML.length = 3;
 var moneybox;
-var vals = []; vals.length = 3;
+var spinvalues = []; spinvalues.length = 3;
 var money = 30;
 var spins = 0;
 var spinsHTML;
@@ -15,9 +15,10 @@ window.onload = function() {
 }
 
 function rollSlots() {
-    money -= 1; updateMoney();
+    money -= 1; payouts();
     spins++;
     spinsHTML.innerHTML = spins + " spins";
+    
     for (i = 0; i < slotsHTML.length; i++) {
         vals[i] = spin();
         slotsHTML[i].innerHTML = vals[i];
