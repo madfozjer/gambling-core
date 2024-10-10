@@ -15,7 +15,7 @@ window.onload = function() {
 }
 
 function rollSlots() {
-    money -= 1; payouts();
+    money -= 1; 
     spins++;
     spinsHTML.innerHTML = spins + " spins";
     
