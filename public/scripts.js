@@ -19,7 +19,7 @@ function gettingElements() {
 }
 
 function rollSlots() {
-    money -= 1; 
+    money -= 1; updateMoney();
     spins++;
     spinsHTML.innerHTML = spins + " spins";
     
