@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -550,24 +550,12 @@ video {
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
-[hidden] {
+[hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
 
-.m-52 {
-  margin: 13rem;
-}
-
-.m-96 {
-  margin: 24rem;
-}
-
-.m-80 {
-  margin: 20rem;
-}
-
-.mt-80 {
-  margin-top: 20rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .ml-auto {
@@ -578,12 +566,28 @@ video {
   margin-right: auto;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-80 {
+  margin-top: 20rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-52 {
+  margin-left: 13rem;
+}
+
+.ml-96 {
+  margin-left: 24rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
 }
 
 .block {
@@ -594,24 +598,20 @@ video {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
+.w-10 {
+  width: 2.5rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.place-items-center {
-  place-items: center;
+.w-20 {
+  width: 5rem;
 }
 
 .items-center {
@@ -620,10 +620,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .gap-3 {
@@ -638,41 +634,26 @@ video {
   align-self: center;
 }
 
-.whitespace-pre {
-  white-space: pre;
+.justify-self-center {
+  justify-self: center;
 }
 
 .border-2 {
   border-width: 2px;
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.border-gray-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity));
-}
-
 .border-gray-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
 }
 
 .bg-gray-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
-.p-52 {
-  padding: 13rem;
+.p-4 {
+  padding: 1rem;
 }
 
 .text-center {
@@ -683,27 +664,12 @@ video {
   vertical-align: middle;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-red-50 {
-  --tw-text-opacity: 1;
-  color: rgb(254 242 242 / var(--tw-text-opacity));
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }

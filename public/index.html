@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">  <!--light/dark mode?-->
     <script src="scripts.js"></script>
 </head>
-<body>
+<body> <!-- first test was accepted -->
     <div id="slot-machine" class="flex gap-3 text-5xl justify-center mt-80"> <!--more slots?-->
         <div id="slot-0"></div>
         <div id="slot-1"></div>
         <div id="slot-2"></div>
     </div> <!--payout table-->
-    <button onclick="rollSlots()" class="ml-auto mr-auto block mt-3 bg-gray-200 border-2 border-gray-400 text-2xl">roll it</button>
+    <div class="inline-block bg-gray-200 ml-14 p-4">
+        🍒🍒🍒, 🔔🔔🔔, 🍈🍈🍈, ☀️☀️☀️ (+7$) <br>
+        🔔☀️☀️, ☀️☀️🔔 (+15$)
+    </div>
+    <button onclick="rollSlots()" class="ml-auto mr-auto block mt-3 bg-gray-200 border-2 borders-gray-400 text-2xl">roll it</button>
     <div id="moneybox" class="flex justify-center mt-3 text-2xl">30$</div>
     <div id="counter" class="flex justify-center mt-3 text-2xl">0 spins</div>
 </body>
