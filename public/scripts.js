@@ -2,7 +2,7 @@
 var slotsHTML = []; slotsHTML.length = 3;
 var money;
 var vals = []; vals.length = 3;
-var money = 30;
+var money = 1000;
 var spins = 0;
 var spinsHTML;
 
@@ -19,7 +19,7 @@ function gettingElements() {
 }
 
 function rollSlots() {
-    money -= 1; updateMoney();
+    money -= 10; updateMoney();
     spins++;
     spinsHTML.innerHTML = spins + " spins";
     
@@ -39,12 +39,12 @@ function rollSlots() {
 
 function payouts() { //optimize?
     if (arraysEqual(vals, ["🍒", "🍒", "🍒"]) || arraysEqual(vals, ["🔔", "🔔", "🔔"]) || arraysEqual(vals, ["🍈", "🍈", "🍈"]) || arraysEqual(vals, ["☀️", "☀️", "☀️"])){
-        money += 7;
+        money += 70;
         updateMoney();
     }
 
     if (arraysEqual(vals, ["🔔", "☀️", "☀️"]) || arraysEqual(vals, ["☀️", "☀️", "🔔"])) {
-        money += 15;
+        money += 150;
         updateMoney();
     }
 }
@@ -62,6 +62,25 @@ function arraysEqual(a, b) {
 
 function updateMoney() {
     moneybox.innerHTML = money + "$";
+}
+
+function sell(item) {
+    if (item == "car") {
+        money += 1000;
+        document.getElementById("car").style.visibility = "hidden";
+    }
+
+    if (item == "house") {
+        money += 5000;
+        document.getElementById("house").style.visibility = "hidden";
+    }
+
+    if (item == "business") {
+        money += 7000;
+        document.getElementById("business").style.visibility = "hidden";
+    }
+
+    updateMoney();
 }
 
 function spin() {
