@@ -8,7 +8,7 @@
     <!--light/dark mode?-->
     <script src="scripts.js"></script>
   </head>
-  <body>
+  <body class="bg-[url(background.jpg)] bg-cover">
     <!-- first test was accepted -->
     <div id="slot-machine" class="flex gap-3 text-5xl justify-center mt-80">
       <!--more slots?-->
@@ -17,33 +17,33 @@
       <div id="slot-2"></div>
     </div>
     <!--payout table-->
-    <div class="inline-block bg-gray-200 ml-14 p-4">
+    <div class="inline-block bg-gray-200 ml-14 p-4 text-2xl bg-opacity-25">
       🍒🍒🍒, 🔔🔔🔔, 🍈🍈🍈, ☀️☀️☀️ (+70$) <br />
       🔔☀️☀️, ☀️☀️🔔 (+150$)
     </div>
     <br />
-    <div id="car" class="ml-14 inline-block text-center mt-4">
-      <span class="text-2xl">🚗</span><br />
+    <div id="car" class="ml-14 inline-block text-center mt-4 text-2xl">
+      <span class="text-3xl">🚗</span><br />
       <button
-        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed"
+        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed bg-opacity-75"
         onclick="sell('car')"
       >
         sell car
       </button>
     </div>
-    <div id="house" class="ml-14 inline-block text-center mt-4">
-      <span class="text-2xl">🏡</span><br />
+    <div id="house" class="ml-14 inline-block text-center mt-4 text-2xl">
+      <span class="text-3xl">🏡</span><br />
       <button
-        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed"
+        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed bg-opacity-75"
         onclick="sell('house')"
       >
         sell house
       </button>
     </div>
-    <div id="business" class="ml-14 inline-block text-center mt-4">
-      <span class="text-2xl">💰</span><br />
+    <div id="business" class="ml-14 inline-block text-center mt-4 text-2xl">
+      <span class="text-3xl">💰</span><br />
       <button
-        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed"
+        class="bg-gray-200 border-gray-300 p-2 border-2 border-dashed bg-opacity-75"
         onclick="sell('business')"
       >
         <!---->
@@ -52,11 +52,11 @@
     </div>
     <button
       onclick="rollSlots()"
-      class="ml-auto mr-auto block mt-3 bg-gray-200 border-2 borders-gray-400 text-2xl"
+      class="ml-auto mr-auto block mt-3 bg-gray-200 border-2 borders-gray-400 text-4xl bg-opacity-75"
     >
       roll it
     </button>
-    <div id="moneybox" class="flex justify-center mt-3 text-2xl">1000$</div>
-    <div id="counter" class="flex justify-center mt-3 text-2xl">0 spins</div>
+    <div id="moneybox" class="flex justify-center mt-3 text-3xl">1000$</div>
+    <div id="counter" class="flex justify-center mt-3 text-3xl">0 spins</div>
   </body>
 </html>
